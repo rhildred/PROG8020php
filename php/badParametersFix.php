@@ -10,9 +10,9 @@ if(isset($_GET['Genre']))
 	$sQuery = $_GET['Genre'];
 }
 
-$stmt = $db->prepare("SELECT * FROM `cds` WHERE genre = '" . $sQuery . "'");
+$stmt = $db->prepare("SELECT * FROM `cds` WHERE genre = ?");
 
-$stmt->execute();
+$stmt->execute(array($sQuery));
 
 $results = $stmt->fetchAll(PDO::FETCH_OBJ);
 
@@ -20,5 +20,3 @@ echo json_encode($results);
 
 
 ?>
-
-

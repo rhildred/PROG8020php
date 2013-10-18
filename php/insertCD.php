@@ -13,8 +13,6 @@ try {
 	
 	$stmt = $db->prepare("INSERT INTO cds(title, arranger, genre) VALUES (?,?,?)");
 	
-	
-	
 	$stmt->execute(array($sTitle, $sArranger, $sGenre));
 	
 	$count = $stmt->rowCount();

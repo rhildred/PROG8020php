@@ -10,7 +10,6 @@ switch($nTestScore)
 	case 'B':
 		echo "Solid effort";
 		break;
-		
 	case 'C':
 		echo "You should have studied more";
 		break;
@@ -18,3 +17,5 @@ switch($nTestScore)
 		echo "You failed";
 		break;
 }
+
+?>
