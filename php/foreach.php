@@ -1,8 +1,14 @@
 <?php
-$aAssociative = ["mr" => "March", "ap" => "April", "my" => "May"];
 
+$aList = array("item0", "item1", "item2", "item3");
 
-foreach($aAssociative as $sShort => $sMonth)
+foreach ($aList as $i => $sItem)
 {
-	echo $sMonth, " is the month with the short form of ", $sShort, "\n";
+      if($i != 0)
+      {
+            echo ", ";
+      }
+      echo $sItem;
 }
+
+?>
