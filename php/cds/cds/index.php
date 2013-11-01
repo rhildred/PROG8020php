@@ -1,6 +1,5 @@
 <?php
 
-header('Content-type: application/json');
 $db = new PDO ( "mysql:host=localhost;dbname=cds", "root", "" );
 
 // check if last part of url is numeric
