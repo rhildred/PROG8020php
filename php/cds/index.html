@@ -19,12 +19,12 @@ padding-right:15px;
 </div>
 <!-- this is where the cd's details will go on the right portion of the screen -->
 <div id="cditemview" class="col-md-7">
-Click on an item to see it's details
 </div>
+<div id="errlist"></div>
 <!-- this is the template for an individual cd in the list ... note the `cds` prefix to the url -->
 <script id="cditem" type="text/template">
 <div>
-	<a href="cds/<%= id %>" class="clickable" ><%= Title %></a>
+	<a href="#cds/<%= id %>" class="clickable" ><%= Title %></a>
 </div>
 </script>
 <!-- this is the template for an individual cd's details the properties inside the <%= ... %> must match the database column names -->
@@ -41,6 +41,8 @@ Click on an item to see it's details
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <!-- underscore is used to render the template with the object from the api -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+<!-- backbone is a router that respects the back button -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
 <!-- this is our javascript -->
-<script src="js/cds.js"></script>
+<script src="js/cdsbackbone.js"></script>
 </html>

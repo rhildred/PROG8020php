@@ -10,8 +10,7 @@ jQuery("document").ready(function(){
 			// we append a single cd into the cdlist div 
 			jQuery("#cdlist").append(fTemplate(oCd));
 		});
-		
-		
+				
 		// be done when we click a link with class clickable
 		jQuery(".clickable").click(function(evt){
 			// we go and get an individual cd
