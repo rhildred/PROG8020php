@@ -82,7 +82,8 @@ INSERT INTO `images` (`id`, `item_id`, `sequence_id`, `url`) VALUES
 (21, 8, 1, 'DSC08725.JPG'),
 (22, 8, 2, 'DSC08723.JPG'),
 (23, 9, 1, 'DSC08770.JPG'),
-(24, 9, 2, 'DSC08773.JPG');
+(24, 9, 2, 'DSC08773.JPG'),
+(25, 1, 3, 'CabinCruzerTowing1.jpg');
 
 -- --------------------------------------------------------
 
