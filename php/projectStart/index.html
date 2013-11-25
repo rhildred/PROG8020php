@@ -28,9 +28,12 @@
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul id="navPlaceHolder" class="nav navbar-nav">
-					<script id="navTemplate" type="text/template">
+						<script id="navTemplate" type="text/template">
 						<li id="category<%= id %>" ><a href="#<%= name %>"><%= name.charAt(0).toUpperCase() + name.slice(1) %></a></li>
 					</script>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_cart&business=S4AU2K6GMVHTC&display=1">View Cart</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
@@ -42,12 +45,12 @@
 			<div data-ride="carousel" class="carousel slide" id="myCarousel1">
 				<!-- Indicators -->
 				<ol id="indicatorPlaceHolder" class="carousel-indicators">
-				<script id="indicatorTemplate" type="text/template">
+					<script id="indicatorTemplate" type="text/template">
 					<li class="<%= activeClass %>" data-slide-to="<%= nImage %>" data-target="#myCarousel1"></li>
 				</script>
 				</ol>
 				<div id="myCarousel1PlaceHolder" class="carousel-inner">
-				<script id="myCarousel1Template" type="text/template">
+					<script id="myCarousel1Template" type="text/template">
 					<div class="item <%= activeClass %>">
 						<img alt="<%= title %>" src="images/<%= url %>" title="<%= title %>" />
 					</div>
@@ -55,11 +58,11 @@
 				</div>
 				<a data-slide="prev" href="#myCarousel1"
 					class="left carousel-control"><i class="fa fa-arrow-left"></i></a>
-				<a data-slide="next" href="#myCarousel"
+				<a data-slide="next" href="#myCarousel1"
 					class="right carousel-control"><i class="fa fa-arrow-right"></i></a>
 			</div>
 			<div id="productPlaceHolder" class="product-caption">
-			<script id="productTemplate" type="text/template">
+				<script id="productTemplate" type="text/template">
 				<h1><%= name %></h1>
 				<div class="row">
 				<div class="col-md-8"><p class="lead"><%= description %></p></div>
@@ -71,7 +74,7 @@
 			</div>
 			<div data-ride="carousel" class="carousel slide" id="myCarousel2">
 				<div id="myCarousel2PlaceHolder" class="carousel-inner">
-				<script id="previewTemplate" type="text/template">
+					<script id="previewTemplate" type="text/template">
 					<div class="col-md-3">
 						<a href="#<%= category_id %>/<%= id %>">
 						<img alt="<%= name %>" src="images/thumbs/<%= url %>.png" title="<%= name %>" />
@@ -86,15 +89,8 @@
 			</div>
 		</div>
 	</div>
-	<div id="home" class="container">
-	Home Page Here
-	</div>
-	<div id="about" class="container">
-	About Page Here
-	</div>
-	<div id="contact" class="container">
-	Contact Page Here
-	</div>
+	<div id="about" class="container">About Page Here</div>
+	<div id="contact" class="container">Contact Page Here</div>
 	<div class="container">
 		<div id="footer">
 			<p class="text-muted credit">
@@ -116,12 +112,14 @@
 			});
 		});
 	</script>
-<!-- underscore is used to render the template with the object from the api -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-<!-- backbone is a router that respects the back button -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
-<!-- this is our javascript -->
-<script src="js/swag.js"></script>
+	<!-- underscore is used to render the template with the object from the api -->
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+	<!-- backbone is a router that respects the back button -->
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
+	<!-- this is our javascript -->
+	<script src="js/swag.js"></script>
 
 </body>
 </html>
