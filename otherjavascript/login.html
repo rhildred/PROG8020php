@@ -33,10 +33,10 @@
                     }
                 });
                 jQuery.ajax({
-                    url: "https://rich-hildred.rhcloud.com/Login2",
+                    url: "https://rich-hildred.rhcloud.com/Ping",
                     data: jQuery(this).serialize()
-                }).done(function (data) {
-                    jQuery("#results").html(data);
+                }).done(function (oPing) {
+                    jQuery("#results").html(oPing.result);
                 }).fail(function (err) {
                     alert(err);
                 });
