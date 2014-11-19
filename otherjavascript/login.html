@@ -26,8 +26,14 @@
     <script>
         jQuery("document").ready(function () {
             jQuery("#login").submit(function () {
+                jQuery.ajaxSetup({
+                    crossDomain: true,
+                    xhrFields: {
+                        withCredentials: true
+                    }
+                });
                 jQuery.ajax({
-                    url: "login.php",
+                    url: "https://rich-hildred.rhcloud.com/Login2",
                     data: jQuery(this).serialize()
                 }).done(function (data) {
                     jQuery("#results").html(data);
